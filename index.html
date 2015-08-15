@@ -1,25 +1,34 @@
-<!DOCTYPE html>
-<html lang="en-us">
+<!doctype html>
+<html>
   <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Slack-image-carousel by onemrkarthik</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
   </head>
   <body>
-    <section class="page-header">
-      <h1 class="project-name">Slack-image-carousel</h1>
-      <h2 class="project-tagline">Web page that shows an image carousel within a lighbox</h2>
-      <a href="https://github.com/onemrkarthik/slack-image-carousel" class="btn">View on GitHub</a>
-      <a href="https://github.com/onemrkarthik/slack-image-carousel/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/onemrkarthik/slack-image-carousel/tarball/master" class="btn">Download .tar.gz</a>
-    </section>
+    <div class="wrapper">
+      <header>
+        <h1>Slack-image-carousel</h1>
+        <p>Web page that shows an image carousel within a lighbox</p>
 
-    <section class="main-content">
-      <h3>
+        <p class="view"><a href="https://github.com/onemrkarthik/slack-image-carousel">View the Project on GitHub <small>onemrkarthik/slack-image-carousel</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/onemrkarthik/slack-image-carousel/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/onemrkarthik/slack-image-carousel/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/onemrkarthik/slack-image-carousel">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h3>
 <a id="problem" class="anchor" href="#problem" aria-hidden="true"><span class="octicon octicon-link"></span></a>Problem</h3>
 
 <p>A web page that shows a photo in a lightbox view, with the ability to move to the next / previous photos and display the photo title. </p>
@@ -32,7 +41,7 @@
 <ul>
 <li>Github url: <a href="https://github.com/onemrkarthik/slack-image-carousel">https://github.com/onemrkarthik/slack-image-carousel</a>
 </li>
-<li>Application is built using NodeJS, and <a href="https://github.com/lasso-js/lasso">lasso-js</a> for bundling resources.</li>
+<li>Application is built using NodeJS, and <a href="https://github.com/lasso-js/lasso">lasso-js</a> for bundling resources. Lasso is similar to browserify and helps load components that follow the CommonJS conventions. All the Javascript Utils and components are written according to CommonJS conventions.</li>
 <li>Has been hosted on Heroku</li>
 </ul>
 
@@ -42,14 +51,32 @@
 <pre><code>src/
     modules/
         carousel/
+            carousel.js
         lightbox/
+            browser.json
+            lightbox.less
+            lightbox.js
     pages/
         index/
+            browser.json
+            index.marko
+            slack-widget.js
+            style.less
+            index.js
     services/
-        flickr-svc
+        flickr-svc/
+           api/
+               index.js 
+           index.js
     static/
         css/
+            mixins.less
+            base.less
         js/
+          jquery-util.js
+          xhr-util.js
+config/
+    routes.json
 tasks/
 index.js
 Gruntfile.js
@@ -72,31 +99,28 @@ README.md
 <ul>
 <li>SEARCH_TERM (required) = any search keyword</li>
 <li>per_page (options) = number of results to be returned, per request</li>
-<li>Sample response:
-<code>
-{
-   photos: [{
-       title: "Von Ryan Racing McLaren 650S GT3 British GT 2015 Sportscar Racing News",
-       url: "https://farm6.static.flickr.com/5781/20611308211_e22d31984f_c.jpg"
-   }],
-   searchKeyword: "ferrari"
+</ul>
+</li>
+<li>Sample ajax response:</li>
+</ul>
+</li>
+</ul>
+
+<pre><code>{
+    photos: [{
+        title: "Von Ryan Racing McLaren 650S GT3 British GT 2015 Sportscar Racing News",
+        url: "https://farm6.static.flickr.com/5781/20611308211_e22d31984f_c.jpg"
+    }],
+    searchKeyword: "ferrari"
 }
-</code>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/onemrkarthik/slack-image-carousel">Slack-image-carousel</a> is maintained by <a href="https://github.com/onemrkarthik">onemrkarthik</a>.</span>
-
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+</code></pre>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/onemrkarthik">onemrkarthik</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
-
-    </section>
-
-  
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
   </body>
 </html>
