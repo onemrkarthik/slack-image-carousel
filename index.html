@@ -98,6 +98,79 @@ package.json
 }
 </code></pre>
 
+<h4>
+<a id="front-end-components" class="anchor" href="#front-end-components" aria-hidden="true"><span class="octicon octicon-link"></span></a>Front end components:</h4>
+
+<ul>
+<li>
+<p>Jquery util - Supports the following methods</p>
+
+<ul>
+<li>hasClass(element, className)</li>
+<li>removeClass(element, className)</li>
+<li>addClass(element, className)</li>
+<li>toggleClass(element, className)</li>
+<li>hide(element)</li>
+<li>show(element)</li>
+<li>$(selector, tag)</li>
+<li>xhr(type, url, data)
+
+<ul>
+<li>get</li>
+<li>post</li>
+<li>put</li>
+<li>delete</li>
+</ul>
+</li>
+<li>append(parent, htmlString)</li>
+<li>trigger(eventName, data)</li>
+<li>addEventListener(element, eventType, eventHandler)</li>
+</ul>
+</li>
+<li>
+<p>Carousel</p>
+
+<ul>
+<li>Events - following events can be fired on the document
+
+<ul>
+<li>slack.carousel.show - initiates the carousel render</li>
+<li>slack.carousel.next - seek to the next image</li>
+<li>slack.carousel.prev - seek to the previous image</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Lightbox</p>
+
+<ul>
+<li>Events - following events can be fired on the document
+
+<ul>
+<li>slack.lightbox.showcontent - displays any content sent across in the lightbox</li>
+<li>slack.lightbox.show - opens the lightbox</li>
+<li>slack.lightbox.hide - closes the lightbox</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+<h4>
+<a id="features-supported" class="anchor" href="#features-supported" aria-hidden="true"><span class="octicon octicon-link"></span></a>Features supported</h4>
+
+<ul>
+<li>All components are responsive</li>
+<li>Has been tested on all modern browsers on Mac and windows</li>
+<li>Has been tested on the chrome mobile simulator across all devices. And on all browsers on iPhone 6+ hardware. </li>
+<li>Images can be changed by entering different search terms in the URL: <a href="https://sheltered-dawn-3909.herokuapp.com/sch/cats">https://sheltered-dawn-3909.herokuapp.com/sch/cats</a>, <a href="https://sheltered-dawn-3909.herokuapp.com/sch/dogs">https://sheltered-dawn-3909.herokuapp.com/sch/dogs</a>
+</li>
+<li>Click on expand icon opens the lightbox</li>
+<li>ESC key or click on close button closes the lightbox</li>
+<li>Left/right arrow keys or Prev/Next icons can be used to go to the previous or next image.</li>
+</ul>
+
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/onemrkarthik/slack-image-carousel">Slack-image-carousel</a> is maintained by <a href="https://github.com/onemrkarthik">onemrkarthik</a>.</span>
 
