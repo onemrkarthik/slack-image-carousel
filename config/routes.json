@@ -1,0 +1,16 @@
+{
+    "routes" : [
+        {
+            "path": "/sch/:kw",
+            "method" : "GET",
+            "handler": "require:./src/pages/index",
+            "name" : "index-page"
+        },
+        {
+            "path": "/svc/media/sch/:kw",
+            "method" : "GET",
+            "handler": "require:./src/services/flickr-svc/index",
+            "name" : "flickr-svc"
+        }
+    ]
+}

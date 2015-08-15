@@ -1,0 +1,35 @@
+{
+
+    "static": {
+        "enabled": true,
+        "priority": 20,
+        "route": "/static",
+        "module": {
+            "name": "serve-static",
+            "arguments": ["static"]
+        }
+    },
+
+    "compress": {
+      "enabled": true
+    },
+
+    "router": {
+        "module": {
+            "arguments": [ "import:./routes.json" ]
+        }
+    },
+
+    "appsec": {
+        "module": {
+            "arguments": [
+                {
+                    "xframe": "SAMEORIGIN",
+                    "p3p": false,
+                    "csp": false,
+                    "csrf": false
+                }
+            ]
+        }
+    }
+}

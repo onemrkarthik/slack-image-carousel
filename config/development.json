@@ -1,0 +1,18 @@
+{
+
+    "optimizer": {
+        "minify": false,
+        "outputDir": "static",
+        "resolveCssUrls": true,
+        "cacheProfile": "development",
+        "fileWriter": {
+            "url-prefix": "/static",
+            "outputDir": "static",
+            "includeSlotNames" : true,
+            "fingerprintsEnabled": false
+        }
+    },
+    "db": {
+        "connectionString": ""
+    }
+}

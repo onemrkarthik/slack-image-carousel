@@ -1,0 +1,15 @@
+{
+
+    "optimizer": {
+        "plugins": [
+            
+        ],
+        "minify": true,
+        "outputDir": "static",
+        "resolveCssUrls": true,
+        "cacheProfile": "production",
+        "bundleReadTimeout": 1000
+    },
+
+    "middleware": "import:./middleware.json"
+}

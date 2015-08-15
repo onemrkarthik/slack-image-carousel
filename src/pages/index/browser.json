@@ -1,0 +1,8 @@
+{
+    "dependencies": [
+        "require-run: ./slack-widget",
+        "../../static/css/mixins.less",
+        "../../static/css/base.less",
+        "style.less"
+    ]
+}
