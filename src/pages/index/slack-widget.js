@@ -30,7 +30,7 @@ SlackWidget.prototype.init = function(config) {
         Extract the search keyword from the dom and pass it along to
         the carousel for the ajax call.
      */
-    this.$mainContainer = this._$.$('.slack-main-container');
+    this.$mainContainer = this._$.query('.slack-main-container');
     this.searchKeyword = this.$mainContainer[0].getAttribute('data-kw');
     this.bindEventListeners();
 };
@@ -45,7 +45,7 @@ SlackWidget.prototype.bindEventListeners = function() {
         - ajax call to fetch more images
         - render more images
      */
-    var $enlargeButton = self._$.$('.slack-button--enlarge');
+    var $enlargeButton = self._$.query('.slack-button--enlarge');
     if(self.isMobile) {
         self._$.addEventListener($enlargeButton, 'touchstart', self.enlargeButtonClickHandler.bind(self));
     } else {

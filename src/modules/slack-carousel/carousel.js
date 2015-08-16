@@ -68,7 +68,7 @@ Carousel.prototype.flickrPhotoHandler = function(error, data) {
         this.photos = data.photos;
         this.totalImages = this.photos.length;
         var showContentData = {
-            html: this._$.$('.slack-main-container')[0].innerHTML
+            html: this._$.query('.slack-main-container')[0].innerHTML
         };
         this._$.trigger('slack.lightbox.showcontent', showContentData);
     }
@@ -97,11 +97,11 @@ Carousel.prototype.prevHandler = function(event) {
 Carousel.prototype.switchPhotoData = function(newImageData) {
     //Caching the dom nodes so that they dont have to be accessed over n over again.
     if (!this.$imageContainer && !this.$mainImageCaption) {
-        this.$imageContainer = this._$.$('.slack-lightbox__content--body .slack-image__figure');
-        this.$mainImageCaption = this._$.$('.slack-lightbox__content--body .slack-image__caption');
+        this.$imageContainer = this._$.query('.slack-lightbox__content--body .slack-image__figure');
+        this.$mainImageCaption = this._$.query('.slack-lightbox__content--body .slack-image__caption');
     }
 
-    var $mainImage = this._$.$('.slack-lightbox__content--body .slack-image__img');
+    var $mainImage = this._$.query('.slack-lightbox__content--body .slack-image__img');
     /*
     Instead of replacing the current image souce, if we create a new image tag,
     the browser progressively renders the new image. It makes for better image

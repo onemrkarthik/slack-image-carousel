@@ -69,9 +69,17 @@ JavascriptUtil.prototype.append = function(parent, htmlString) {
     parent.appendChild(htmlString);
 };
 
+JavascriptUtil.prototype.remove = function(element) {
+    if (!element) {
+        return;
+    }
+
+    element.parentNode.removeChild(element);
+};
+
 JavascriptUtil.prototype.xhr = XHR();
 
-JavascriptUtil.prototype.$ = function(selector, tag) {
+JavascriptUtil.prototype.query = function(selector, tag) {
     if (!selector) {
         return null;
     }

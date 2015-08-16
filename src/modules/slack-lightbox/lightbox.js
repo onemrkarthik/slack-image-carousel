@@ -10,9 +10,9 @@ function Lightbox(config) {
 Lightbox.prototype.init = function(config) {
     this._$ = config._$;
     this.isMobile = config.isMobile;
-    this.$mainPageContainer = this._$.$(config.pageMainContainer);
+    this.$mainPageContainer = this._$.query(config.pageMainContainer);
     this.state = 0;
-    this.$root = this._$.$('.slack-lightbox');
+    this.$root = this._$.query('.slack-lightbox');
     this.bindEventListeners();
 };
 
@@ -28,7 +28,7 @@ Lightbox.prototype.bindEventListeners = function() {
         }
     });
 
-    var $closeButton = self._$.$('.slack-lightbox__button--close');
+    var $closeButton = self._$.query('.slack-lightbox__button--close');
     if (self.isMobile) {
         self._$.addEventListener($closeButton, 'touchstart', self.closeHandler.bind(self));
     } else {
@@ -66,7 +66,7 @@ Lightbox.prototype.toggleAccessibility = function() {
 };
 
 Lightbox.prototype.showContentHandler = function(event) {
-    var $lightBoxContainer = this._$.$('.slack-lightbox__content--body');
+    var $lightBoxContainer = this._$.query('.slack-lightbox__content--body');
     var html = event.detail.data.html;
     if ($lightBoxContainer.length > 0) {
         $lightBoxContainer[0].innerHTML = html;
