@@ -1,7 +1,7 @@
 ### Problem
 A web page that shows a photo in a lightbox view, with the ability to move to the next / previous photos and display the photo title. 
 
-[Demo](https://sheltered-dawn-3909.herokuapp.com/sch/ferrari) can be seen here. 
+[Demo](https://lit-springs-4807.herokuapp.com/sch/cats) can be seen here. 
 
 ###Developer documentation:
 * Github url: https://github.com/onemrkarthik/slack-image-carousel
@@ -31,6 +31,8 @@ src/
         js/
           jquery-util.js
           xhr-util.js
+tests/
+    jquery-util/
 config/
     routes.json
 index.js
@@ -40,7 +42,7 @@ package.json
 #### API's used
 * Used the [node-flickrapi](https://github.com/Pomax/node-flickrapi) node module to make use Flickr's [Search API](https://www.flickr.com/services/api/flickr.photos.search.html)
 * AJAX command: 
-   * http://sheltered-dawn-3909.herokuapp.com/svc/media/sch/SEARCH_TERM?[per_page=10]
+   * https://lit-springs-4807.herokuapp.com/svc/media/sch/SEARCH_TERM?[per_page=10]
       * SEARCH_TERM (required) = any search keyword
       * per_page (options) = number of results to be returned, per request
    * Sample ajax response:
@@ -53,6 +55,19 @@ package.json
     searchKeyword: "ferrari"
 }
 ```
+
+####Running the tests
+
+#####Linting - **_grunt lint_**. Runs the following:
+* jshint
+* jscs
+
+#####Unit-tests - **_grunt test_** 
+* runs the lint and unit tests. 
+* generates test reports. 
+* tests are run using karma test runner. 
+
+#####Coverage report - **_grunt coverage_**
 
 ### Front end components:
 #### Jquery util - Supports the following methods
@@ -90,7 +105,11 @@ package.json
 * Has been tested on all modern browsers on Mac(Firefox, safari, and chrome) and windows (Firefox, safari, chrome and IE)
 * Has been tested on the chrome mobile simulator across all devices. And on Safari and Chrome on iPhone 6+ hardware.
 * Has not been tested on Opera.  
-* Images can be changed by entering different search terms in the URL: https://sheltered-dawn-3909.herokuapp.com/sch/cats, https://sheltered-dawn-3909.herokuapp.com/sch/dogs
+* Images can be changed by entering different search terms in the URL: https://lit-springs-4807.herokuapp.com/sch/ferrari, https://lit-springs-4807.herokuapp.com/sch/dogs
 * Click on expand icon opens the lightbox
 * ESC key or click on close button closes the lightbox
-* Left/right arrow keys or Prev/Next icons can be used to go to the previous or next image.
+* Left/right arrow keys or Prev/Next icons can be used to go to the previous or next image. Infinite loop has been implemented. 
+* Enhancements
+    * Tests have been written only for the jquery-util. Will have to write tests for all the components
+    * Swipe functionality for mobile
+    * Thorough accessibility check
