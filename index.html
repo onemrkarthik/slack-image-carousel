@@ -61,6 +61,8 @@
         js/
           jquery-util.js
           xhr-util.js
+tests/
+    jquery-util/
 config/
     routes.json
 index.js
@@ -97,6 +99,31 @@ package.json
     searchKeyword: "ferrari"
 }
 </code></pre>
+
+<h4>
+<a id="running-the-tests" class="anchor" href="#running-the-tests" aria-hidden="true"><span class="octicon octicon-link"></span></a>Running the tests</h4>
+
+<h5>
+<a id="linting---grunt-lint-runs-the-following" class="anchor" href="#linting---grunt-lint-runs-the-following" aria-hidden="true"><span class="octicon octicon-link"></span></a>Linting - <strong><em>grunt lint</em></strong>. Runs the following:</h5>
+
+<ul>
+<li>jshint</li>
+<li>jscs</li>
+</ul>
+
+<h5>
+<a id="unit-tests---grunt-test" class="anchor" href="#unit-tests---grunt-test" aria-hidden="true"><span class="octicon octicon-link"></span></a>Unit-tests - <strong><em>grunt test</em></strong>
+</h5>
+
+<ul>
+<li>runs the lint and unit tests. </li>
+<li>generates test reports. </li>
+<li>tests are run using karma test runner. </li>
+</ul>
+
+<h5>
+<a id="coverage-report---grunt-coverage" class="anchor" href="#coverage-report---grunt-coverage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Coverage report - <strong><em>grunt coverage</em></strong>
+</h5>
 
 <h3>
 <a id="front-end-components" class="anchor" href="#front-end-components" aria-hidden="true"><span class="octicon octicon-link"></span></a>Front end components:</h3>
@@ -167,7 +194,15 @@ package.json
 </li>
 <li>Click on expand icon opens the lightbox</li>
 <li>ESC key or click on close button closes the lightbox</li>
-<li>Left/right arrow keys or Prev/Next icons can be used to go to the previous or next image.</li>
+<li>Left/right arrow keys or Prev/Next icons can be used to go to the previous or next image. Infinite loop has been implemented. </li>
+<li>Enhancements
+
+<ul>
+<li>Tests have been written only for the jquery-util. Will have to write tests for all the components</li>
+<li>Swipe functionality for mobile</li>
+<li>Thorough accessibility check</li>
+</ul>
+</li>
 </ul>
 
       <footer class="site-footer">
