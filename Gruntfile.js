@@ -9,7 +9,7 @@ module.exports = function(grunt) {
 
     // Register group tasks
     grunt.registerTask('lint', ['jscs', 'jshint']);
-    grunt.registerTask('test', ['karma:test']);
+    grunt.registerTask('test', ['lint', 'karma:test']);
     grunt.registerTask('coverage', ['karma:coverage']);
     grunt.event.on('coverage', function (content, done) {
         done();
