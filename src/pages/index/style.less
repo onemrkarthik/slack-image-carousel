@@ -13,8 +13,12 @@
     bottom: 0;
     left: 0;
     margin: auto;    
-    width: 30rem;
-    height: 30rem;
+    height: 27rem;
+
+     /* tablet & desktop */
+    @media screen and (min-width: 737px){
+        width: 30rem;
+    }
 }
 
 .slack-image-container {
@@ -23,7 +27,7 @@
 
 .slack-image__figure {
     position: relative;
-    height: 85%;
+    height: 80%;
     margin: 0 auto;
     background-position: 50%;
     background-image: url('../../static/images/photo-stack.png');
@@ -36,8 +40,11 @@
     color: #666;
     font-weight: 500;
     font-style: italic;
-    padding: 0 1rem;
+    padding: 1rem;
     text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .slack-image__img {
@@ -113,6 +120,8 @@
     
     .slack-image__caption {
         padding: 1rem;
+        overflow: auto;
+        white-space: inherit;
     }
 
     .slack-arrow--left, .slack-arrow--right { 
